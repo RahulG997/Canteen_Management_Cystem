@@ -1,0 +1,31 @@
+
+<p></p>
+<style>
+    .button
+    {
+        border-radius: 15px;
+    }
+</style>
+
+
+<form name="placeOrder">
+    CUSTOMER ID : 
+    <input type="number" name="model.cusId" [(ngModel)]="model.cusId" />  <br/> <br/> <br/> 
+    QUANTITY : 
+    <input type="number" [(ngModel)]="model.quantity" name="quantity" /> <br/><br/> 
+    SELECT MENU ITEM 
+    <select [(ngModel)]="menu.foodName" name="foodName" (change)="showAmount()">
+        <option *ngFor="let e of menuList | async" value={{e.foodId}}>
+            {{e.foodName}}
+        </option>
+    </select> <br/><br/> 
+    ORDER DATE  :
+    <input type="date" [(ngModel)]="model.ordDate" name="ordDate" /> <br/><br/>
+    <input type="button" value="Place Order" (click)=placeOrder() />   <br/><br/> 
+    {{result}}
+</form>
+
+
+
+
+

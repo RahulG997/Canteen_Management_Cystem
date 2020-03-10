@@ -1,0 +1,12 @@
+
+-- change the database to your team id
+use MLP191;
+
+
+insert into CUSTOMER values('10','Mahima','9854711','chennai,siruseri','Mahima@gmail.com',1000,""),
+('11','santhosh','7532411','chennai,navluru','sandy@gmail.com',1000,"");
+
+
+insert into MENU values('FV001','sandwich',30),('FN001','chicken biryani',100);
+
+insert into VENDORS values('MAHIMA','V001','Password123','10'),('THANUJA','V002','HElloWOrld','11');

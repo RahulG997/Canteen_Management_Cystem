@@ -1,0 +1,48 @@
+<style>
+  .img1 {
+    float:right;
+     width: 45%;
+     height: 650px;
+   }
+   .th {
+      background-color: #4CAF50;
+      color: white;
+      height:100%;
+    }
+    .table{
+      width: 100%;
+      border: 1px solid black;
+      border-collapse: collapse;
+      height:50%;
+    }
+    .tr
+    {
+        width: 50%;
+        height: 50%;
+    }
+  </style>
+  
+  
+  <img class="img1" size = "100px" src="https://serving.photos.photobox.com/922951630e41e81a158a1b0d122189869c5e8ec6c281cc5e1cb0aacbe8513fde18afa470.jpg" alt="Food Image Error!">
+
+
+
+<p></p>
+<table  style = "width: 55%; height: 100%;">
+  <tr>
+<th style="font-size: smaller;">VENDOR ID </th>
+<th style="font-size: smaller;">VENDOR NAME </th>
+<th style="font-size: smaller;">VENDOR PASSWORD </th>
+<th style="font-size: smaller;">VENDOR WALLET </th>
+<th style="font-size: smaller;">CUSTOMER ID </th>
+<th style="font-size: smaller;">VENDOR STATUS</th>
+</tr>
+<tr>
+<td>{{(vendor | async)?.venId}} </td> 
+<td>{{(vendor | async)?.venName}}  </td>
+<td>{{(vendor | async)?.venPassword}} </td> 
+<td>{{(vendor | async)?.venWallet}}</td>
+<td>{{(vendor | async)?.cusId}} </td>
+<td>{{(vendor | async)?.venStatus}} </td>
+</tr>
+</table>

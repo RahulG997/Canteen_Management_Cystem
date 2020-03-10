@@ -1,0 +1,25 @@
+<p></p>
+<table style="width:60%;font-size: smaller;">
+        <tr>
+            <th>ORDER ID</th>
+            <th>ORDER DATE</th>
+            <th>FOOD ID</th>
+            <th>QUANTITY</th>
+            <th>TOTAL</th>
+            <th>ORDER STATUS</th>
+            <th>CUSTOMER ID</th>
+            <th>TOKEN</th>
+            
+
+        </tr>
+        <tr *ngFor="let u of orders | async">
+            <td>{{u.ordId}}</td>
+            <td>{{u.ordDate}}</td>
+            <td>{{u.foodId}}</td>
+            <td>{{u.quantity}}</td>
+            <td>{{u.total}}</td> 
+            <td>{{u.ordStatus}}</td> 
+            <td>{{u.cusId}}</td>
+            <td>{{u.token}}</td>
+        </tr>
+    </table>

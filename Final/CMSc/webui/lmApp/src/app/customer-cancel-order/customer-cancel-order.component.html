@@ -1,0 +1,35 @@
+<p></p>
+
+<style>
+
+
+
+
+input[type=number], 
+        input[type=number],
+        input[type=text],
+        input[type=button] { 
+            width: 15%; 
+            padding: 9px; 
+            margin: 7px 0; 
+            display: inline-block; 
+            border: 1px solid rgb(19, 2, 2); 
+            box-sizing: border-box; 
+            border-radius: 25px;
+        } 
+</style>
+
+
+
+
+<form>
+    CUSTOMER Id :
+    <input type="number" name ="cusId" [(ngModel)]="cusId"/> <br/> <br/>
+    ORDER Id :
+    <input type="number" name ="ordId" [(ngModel)]="ordId"/> <br/><br/>
+    STATUS :
+    <input type="text" name ="status" [(ngModel)]="status"/> <br/><br/>
+    <input type="button" value="Cancel Order" (click)="cancel()" /> <br/><br/>
+
+    {{result}}
+</form>

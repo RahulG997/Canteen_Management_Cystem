@@ -1,0 +1,75 @@
+
+<style> 
+  /* body {
+    float: right;
+    background-image: url('cupice.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: 40% 100%;
+  }
+   */
+  
+  
+      /*assign full width inputs*/ 
+        
+      input[type=text],
+      input[type=number], 
+      input[type=date]
+       { 
+          width: 15%; 
+          padding: 9px; 
+          margin: 7px 0; 
+          display: inline-block; 
+          border: 1px solid rgb(19, 2, 2); 
+          box-sizing: border-box; 
+          border-radius: 25px;
+      } 
+      /*set a style for the buttons*/ 
+        
+      button { 
+          background-color: #4CAF50; 
+          color: white; 
+          padding: 14px 10px; 
+          margin: 8px 0; 
+          border: none; 
+          cursor: pointer; 
+          width: 40%; 
+          border-radius: 25px;
+      } 
+      button:hover{
+      
+          color:whitesmoke;
+          background: lawngreen;
+      }
+   
+  </style>
+<p>
+  Hello New Customer :-)
+</p>
+
+<form method="post">
+    UserName : 
+    <input type="text" name="cusName" [(ngModel)]="customers.cusName" /> <br/><br/> 
+    Phone Number : 
+    <input type="text" name="cusPhone" [(ngModel)]="customers.cusPhone" /> <br/><br/>
+    Email : 
+    <input type="text" name="cusEmail" [(ngModel)]="customers.cusEmail" /> <br/><br/>
+    Amount : 
+    <input type="number" name="currAmt" [(ngModel)]="customers.currAmt" /> <br/><br/>
+    Password : 
+    <input type="text" name="password" [(ngModel)]="customers.password" /> <br/><br/>
+    Dob: 
+    <input type="date" name="cusDob" [(ngModel)]="customers.cusDob" /> <br/><br/>
+
+    <input type="button" style="   background-color: #4CAF50; 
+    color: white; 
+    padding: 14px 10px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+    width: 20%; 
+    border-radius: 25px;" value="Sign up" (click)="customersigning()" />
+</form>
+<p *ngIf="count > 1">
+    <b>Invalid Credentials...</b>
+</p>

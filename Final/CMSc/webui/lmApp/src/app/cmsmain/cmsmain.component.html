@@ -1,0 +1,90 @@
+
+
+<style>
+  body{
+background-image:url();
+background-size: cover;
+}
+.btn {
+ float: left;
+  width: 4%;
+  height: 200px;
+  padding: 3%;
+  border: none;
+  border-radius: 6%;
+  margin: 5%;
+  opacity: 0.85;
+ 
+  
+  font-size: 15px;
+  text-align: center;
+  line-height: 2px;
+  margin-left:auto;margin-right:auto;display:block;margin-top:5%;margin-bottom:5%;
+  text-decoration: none; /* remove underline from anchors */
+}
+ .btn:hover {
+   color: rgb(240, 240, 243);
+   background:rgb(3, 153, 3);
+}
+.customer {
+  background-color: orange;
+  color: white;
+  border-radius: 50px;
+  height: 13%;
+  width: 18%;
+ 
+}
+.vendor {
+  background-color: rgb(5, 203, 253);
+  color: white;
+  border-radius: 50px;
+  height: 13%;
+  width: 18%;
+ }
+ .vendorsignup {
+  background-color: violet;
+  color: white;
+  border-radius: 50px;
+  height: 13%;
+  width: 18%;
+ }
+ .customersignup {
+  background-color: rgb(199, 72, 72);
+  color: white;
+  border-radius: 50px;
+  height: 13%;
+  width: 18%;
+ }
+.center {
+  float: left;
+  display: block;
+  background-position:25% 75%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 35%;
+}
+.img1 {
+ float:right;
+  width: 49%;
+  height: 1000px;
+}
+</style>
+<img class="center" size = "100px" src="https://serving.photos.photobox.com/82128238b2a019d5ee30172962caa901a4fcb81ae9d971f0be92d12acedc2fab74b58068.jpg" alt="Food Image Error!">
+<img class="img1" size = "50px" src="https://serving.photos.photobox.com/80972117b44797879dd0e18352b7f36fcdc252552f3898713f3daad445c75d6924417795.jpg" alt="Food Image Error!">
+
+<a style="font-family: cursive"  class = "vendor btn" [routerLink]="['/cms-main',
+ {outlets: {'data': ['vendor-login']}}]">VENDOR LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+<a style="font-family: cursive" class = "customer btn" [routerLink]="['/cms-main',
+ {outlets: {'data': ['customer-login']}}]">CUSTOMER LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;
+ <a  style="font-family: cursive" class = "customersignup btn"[routerLink]="['/cms-main',
+ {outlets: {'data': ['customersignup']}}]">Customer Signup</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ 
+ <a style="font-family: cursive" class = "vendorsignup btn" [routerLink]="['/cms-main',
+ {outlets: {'data': ['vendorsignup']}}]">Vendor Signup</a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+ 
+<router-outlet name='data'></router-outlet>

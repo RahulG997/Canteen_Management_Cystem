@@ -1,0 +1,106 @@
+<B>WELCOME </B>{{userName}} 
+<style>
+.btn1{
+padding: 14px 10px;
+width:10%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn2{
+padding: 14px 10px;
+width:10%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn3{
+padding: 14px 10px;
+width:10%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn4{
+padding: 14px 10px;
+width:10%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn5{
+padding: 14px 10px;
+width:10%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn6{
+padding: 14px 10px;
+width:10%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn1:hover{
+    color:aliceblue;
+    background: rgb(11, 209, 11);
+}
+.btn2:hover{
+    color:aliceblue;
+    background: rgb(11, 209, 11);
+}
+.btn3:hover{
+    color:aliceblue;
+    background: rgb(11, 209, 11);
+}
+.btn4:hover{
+    color:aliceblue;
+    background: rgb(11, 209, 11);
+}
+.btn5:hover{
+    color:aliceblue;
+    background: rgb(11, 209, 11);
+}
+.btn6:hover{
+    color:aliceblue;
+    background: rgb(11, 209, 11);
+}
+
+
+
+</style>
+
+<!-- <app-customer-info></app-customer-info> 
+<hr/>
+<br/> 
+<app-customer-order-history></app-customer-order-history>
+<hr/>
+<br/>
+<app-customer-pending-history></app-customer-pending-history>
+<hr/>
+<br/>
+<app-place-order></app-place-order>
+<hr/>
+<br/>
+<app-customer-cancel-order></app-customer-cancel-order> -->
+
+<app-customer-info></app-customer-info>
+
+<br>
+<br><br>
+<a [routerLink]="['/dashBoard',{outlets: {'data':['placeOrder']}}]" class ="btn1">Place Order</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <a [routerLink]="['/dashBoard',{outlets: {'data':['customerPendingHistory']}}]" class = "btn2">Customer Pending History</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+<a [routerLink]="['/dashBoard',{outlets: {'data':['customerOrderHistory']}}]" class ="btn3"> Order History </a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/dashBoard',{outlets: {'data':['wallet']}}]" class = "btn4">Add Money</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/dashBoard',{outlets: {'data':['customerCancelOrder']}}]" class ="btn5">Cancel Order</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<a [routerLink]="['/cms-main']" class ="btn6">Logout</a> &nbsp;&nbsp;&nbsp;&nbsp;
+
+<br/><br/><br/>
+<router-outlet name='data'></router-outlet>

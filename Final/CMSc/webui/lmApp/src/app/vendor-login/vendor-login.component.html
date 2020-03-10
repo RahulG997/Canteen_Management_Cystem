@@ -1,0 +1,56 @@
+<p>Welcome Cheif,Good 2 See U!!</p>
+<style> 
+    /* body {
+      float: right;
+      background-image: url('cupice.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: 40% 100%;
+    }
+     */
+    
+    
+        /*assign full width inputs*/ 
+          
+        input[type=text], 
+        input[type=text] { 
+            width: 15%; 
+            padding: 9px; 
+            margin: 7px 0; 
+            display: inline-block; 
+            border: 1px solid rgb(19, 2, 2); 
+            box-sizing: border-box; 
+            border-radius: 25px;
+        } 
+        /*set a style for the buttons*/ 
+          
+        button { 
+            background-color: #4CAF50; 
+            color: white; 
+            padding: 14px 10px; 
+            margin: 8px 0; 
+            border: none; 
+            cursor: pointer; 
+            width: 40%; 
+            border-radius: 25px;
+        } 
+        button:hover{
+        
+            color:whitesmoke;
+            background: lawngreen;
+        }
+     
+    </style>     
+
+<form method="post"><br/><br/>
+   
+    
+    <B>NAME:</B><input type="text" name="userName" [(ngModel)]="userName" /> <br/><br/> 
+  
+    <B>PASSWORD:</B><input type="text" name="passWord" [(ngModel)]="passWord"  /> <br/><br/> 
+    <input type="button" style ="padding: 14px 10px; width:20%; border-radius: 25px;background-color: #4CAF50; 
+    color: white;" value="Login" (click)="validate()" />
+</form>
+<p *ngIf="count > 1">
+    <b>Invalid Credentials...</b>
+</p>

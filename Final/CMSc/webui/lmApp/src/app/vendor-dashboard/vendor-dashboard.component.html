@@ -1,0 +1,76 @@
+<B>WELCOME VENDOR </B>: {{userName}} 
+<br/>
+<app-vendor-info></app-vendor-info> 
+
+<br/> 
+<style>
+.btn1{
+padding: 14px 10px;
+width:20%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn2{
+padding: 14px 10px;
+width:20%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn3{
+padding: 14px 10px;
+width:20%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn4{
+padding: 14px 10px;
+width:20%;
+border-radius: 25px;
+background-color:chocolate; 
+color: white;
+text-decoration: none;
+}
+.btn1:hover{
+    color:aliceblue;
+    background: rgb(8, 197, 8);
+}
+.btn2:hover{
+    color:aliceblue;
+    background: rgb(8, 197, 8);
+}
+.btn3:hover{
+    color:aliceblue;
+    background: rgb(8, 197, 8);
+}
+.btn4:hover{
+    color:aliceblue;
+    background: rgb(8, 197, 8);
+}
+
+
+
+
+
+</style>
+<br>
+<br>
+<a  [routerLink]="['/vendor-dashboard',
+ {outlets: {'data': ['vendor']}}]" class ="btn1" style ="font-size: smaller;">VENDOR DETAILS</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ <a  [routerLink]="['/vendor-dashboard',
+ {outlets: {'data': ['pending-orders-vendor']}}]" class ="btn2" style="font-size: smaller;">VENDOR PENDING ORDERS</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ <a  [routerLink]="['/vendor-dashboard',
+ {outlets: {'data': ['vendor-acceptedor-rejected-order']}}]" class = "btn3" style="font-size: smaller;">ACCEPT/REJECT ORDER</a> &nbsp;&nbsp;&nbsp;&nbsp;
+ 
+ 
+ <a  [routerLink]="['/cms-main']" class = "btn4" style="font-size: smaller;">LOGOUT</a> &nbsp;&nbsp;&nbsp;&nbsp;
+<!-- <app-place-order></app-place-order> -->
+<!-- <app-vendor></app-vendor> -->
+<!-- <app-wallet></app-wallet>  -->
+<br/><br/> <br/><br/>
+<router-outlet name='data'></router-outlet>

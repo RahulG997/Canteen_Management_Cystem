@@ -1,0 +1,27 @@
+
+<p></p>
+<style>
+ input[type=text], 
+ input[type=text],
+ input[type=number] { 
+            width: 15%; 
+            padding: 9px; 
+            margin: 7px 0; 
+            display: inline-block; 
+            border: 1px solid rgb(19, 2, 2); 
+            box-sizing: border-box; 
+            border-radius: 25px;
+        } 
+</style>
+
+<form>
+    VENDOR ID : 
+    <input type="number" name="vendId" [(ngModel)]="vendId" /> <br/><br/> 
+    ORDER ID : 
+    <input type="number" name="orderId" [(ngModel)]="orderId" /> <br/><br/> 
+    STATUS : 
+    <input type="text" name="status" [(ngModel)]="status" /> <br/><br/> 
+    <input type="button" value="ACCEPT/REJECT ORDER" (click)="acceptOrReject()" /> <br/><br/>
+    {{result}}
+
+</form>
